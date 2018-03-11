@@ -1,0 +1,37 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My portfolio site",
+  "repository": "git@bitbucket.org:DeWa/portfolio.git",
+  "author": "Joonas Reinikka <joonas.reinikka@gmail.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "browsersync": "npx browser-sync start --server 'dist' --files 'dist'",
+    "build-js:dev": "npx babel src/js --out-dir dist/js --source-maps inline & cp -a src/js/vendor dist/js/vendor",
+    "build-assets:dev": "cp -a -R src/assets dist",
+    "build-html:dev": "cp -f src/*.html dist/",
+    "build-css:dev": "node-sass src/sass/main.scss dist/css/main.css",
+    "postbuild-css:dev": "postcss dist/css/main.css  --use autoprefixer -b 'last 2 versions' -o dist/css/main.css",
+    "build-all:dev": "yarn build-js:dev & yarn build-assets:dev & yarn build-html:dev & yarn build-css:dev",
+    "watch-all": "concurrently 'yarn watch-js' 'yarn watch-img' 'yarn watch-html' 'yarn watch-css'",
+    "watch-js": "chokidar 'src/js/**/*.js' -c 'yarn build-js:dev'",
+    "watch-img": "chokidar 'src/assets/**/*' -c 'yarn build-assets:dev'",
+    "watch-html": "chokidar 'src/*.html' -c 'yarn build-html:dev'",
+    "watch-css": "chokidar 'src/sass/*.scss' -c 'yarn build-css:dev'",
+    "dev": "yarn build-all:dev & yarn watch-all & yarn browsersync"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.5",
+    "chokidar-cli": "^1.2.0",
+    "concurrently": "^3.5.1",
+    "cssnano": "^3.10.0",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.19",
+    "postcss-cli": "^5.0.0",
+    "prettier": "1.10.2"
+  }
+}
