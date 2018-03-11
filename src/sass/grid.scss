@@ -1,0 +1,101 @@
+/* Huge thanks to this codepen
+https://codepen.io/meduzen/pen/zxbwRV
+*/
+
+#scanlines {
+  position: absolute;
+  overflow: hidden;
+  width: 200vh;
+  height: 100vh;
+  background-size: 10px;
+  background-repeat: repeat;
+  background-image: linear-gradient(to bottom, transparent 50%, $scanline-color1  51%);
+  animation: scanlines-scroll 0s steps(30) infinite;
+  z-index: -10;
+
+  &:before {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+    height: 2px;
+    z-index: 90;
+    background: yellow;
+    opacity: .75;
+    animation: scanline 6s linear infinite;
+  }
+}
+
+#sky {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  height: 60vh;
+  width: 100vw;
+  z-index: -12;
+  background-image: url('../assets/img/sky.png'), 
+    linear-gradient(to top, $sky-color1 5%, #121835 50%);
+
+  .moon {
+    width: $moon-size;
+    height: $moon-size;
+    margin-bottom: -10vh;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom,
+      $moon-color-1 20%,
+      $moon-color-2 40%,
+      transparent 40%,
+      transparent 45%,
+      $moon-color-2 45%,
+      $moon-color-3 60%,
+      transparent 60%,
+      transparent 65%,
+      $moon-color-3 65%
+    );
+    z-index: 999;
+  }
+}
+
+#grid {
+  position: fixed;
+  height: 40vh;
+  width: 100vw;
+  top: 60vh;
+  overflow: hidden;
+  z-index: -10;
+
+  background-color: rgb(0, 0, 0);
+  background-size: 100% auto;
+  box-shadow: 0px -5px 35px 3px $fade-color;
+  border-top: 2px solid $grid-color;
+
+  perspective: 90px;
+  perspective-origin: top;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 300vw;
+    height: inherit;
+
+    background-color: transparent;
+    background-size: 120px 50px;
+    background-image: linear-gradient(to right,
+      transparent 40%,
+      $grid-color-fade 50%,
+      $grid-color 2px,
+      $grid-color-fade 60%,
+      transparent 70%
+    ),
+    linear-gradient(to top,
+      transparent 40%,
+      $grid-color-fade 50%,
+      $grid-color 2px,
+      $grid-color-fade 60%,
+      transparent 70%
+    );
+    z-index: -111;
+    transform: rotateX(40deg) translate(-30%, -25%);
+    animation: scroll 1s linear infinite;
+  }
+}
