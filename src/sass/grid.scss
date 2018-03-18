@@ -1,6 +1,18 @@
 /* Huge thanks to this codepen
 https://codepen.io/meduzen/pen/zxbwRV
 */
+.blur {
+  position: absolute;
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1.2');
+  -webkit-filter: url(#blur-filter);
+        filter: url(#blur-filter);
+        -webkit-filter: blur(1.2px);
+        filter: blur(1.2px);
+}
+
+.blur-svg {
+  display: none;
+}
 
 #scanlines {
   position: absolute;
@@ -11,7 +23,7 @@ https://codepen.io/meduzen/pen/zxbwRV
   background-repeat: repeat;
   background-image: linear-gradient(to bottom, transparent 50%, $scanline-color1  51%);
   animation: scanlines-scroll 0s steps(30) infinite;
-  z-index: -10;
+  z-index: -7;
 
   &:before {
     position: absolute;

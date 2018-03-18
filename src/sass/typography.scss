@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Rubik+Mono+One');
 
-.first-name {
-  
+
+.firstname {
+  fill: rgb(255,72,196);
+  stroke: rgb(153, 8, 107);
+  stroke-width: 1;
+  stroke-linecap: round;
+  //animation: writing 5s linear infinite;
 }
-
 .surname {
-  font-family: 'Alfa Slab One', cursive;
-  text-transform: uppercase;
-  font-size: 10rem;
-  background: linear-gradient(to top,  #180d44 0%,#ff23d8 29%,#220e49 29%,#270f4b 30%,#2f1050 35%,#93edff 36%,#7c1d76 50%,#c73fbe 53%,#7f1d77 53%,#8a1f7d 60%,#180d44 67%,#93edff 72%,#180d44 72%,#180d44 86%,#93edff 86%,#180d44 87%,#180d44 100%);
-  -webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+  font-family: 'Rubik Mono One', sans-serif;
 }

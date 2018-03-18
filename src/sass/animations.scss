@@ -38,3 +38,28 @@
       bottom: 0%;
   }
 }
+
+@keyframes writing {
+  0% {
+		stroke-dashoffset: 1200
+	}
+	33% {
+		stroke-width:5;
+	}
+	90% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dashoffset: 0;
+		stroke-width:17;
+	}
+}
+
+@keyframes triangle {
+  0% {
+		stroke-dashoffset: 6200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
