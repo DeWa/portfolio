@@ -60,6 +60,38 @@ body {
   stroke-linecap: round;
 }
 
+.pen {
+  fill: url(#pinkAsShit);
+  stroke:rgb(111, 21, 105);
+  stroke-width: 1px;
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: writing 5s ease-in forwards;
+}
+
 nav, #nav {
+  z-index: 999; // always on top
   position: fixed;
+  width: 100%;
+
+  ul {
+    padding-right: 20px;
+    float: right;
+    list-style: none;
+  }
+
+  li {
+    padding: 5px 20px;
+    float: left;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.7rem;
+    color: rgb(91,200,175);
+
+    &:hover {
+      animation: pinkshadow 0.4s linear forwards;
+    }
+  }
+
 }

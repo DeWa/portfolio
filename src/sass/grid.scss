@@ -3,11 +3,11 @@ https://codepen.io/meduzen/pen/zxbwRV
 */
 .blur {
   position: absolute;
-  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='1.2');
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0.7');
   -webkit-filter: url(#blur-filter);
         filter: url(#blur-filter);
-        -webkit-filter: blur(1.2px);
-        filter: blur(1.2px);
+        -webkit-filter: blur(0.7px);
+        filter: blur(0.7px);
 }
 
 .blur-svg {
