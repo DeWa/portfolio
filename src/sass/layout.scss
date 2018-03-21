@@ -9,7 +9,6 @@ body, html, div {
 }
 
 body {
-  line-height: 1;
   overflow: hidden;
 }
 
@@ -82,6 +81,10 @@ nav, #nav {
     list-style: none;
   }
 
+  a {
+    float: left;
+  }
+  
   li {
     padding: 5px 20px;
     float: left;
@@ -93,5 +96,4 @@ nav, #nav {
       animation: pinkshadow 0.4s linear forwards;
     }
   }
-
 }

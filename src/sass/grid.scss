@@ -17,9 +17,9 @@ https://codepen.io/meduzen/pen/zxbwRV
 #scanlines {
   position: absolute;
   overflow: hidden;
-  width: 200vh;
-  height: 100vh;
-  background-size: 10px;
+  width: 100vw;
+  height: 200vw;
+  background-size: 3px;
   background-repeat: repeat;
   background-image: linear-gradient(to bottom, transparent 50%, $scanline-color1  51%);
   animation: scanlines-scroll 0s steps(30) infinite;

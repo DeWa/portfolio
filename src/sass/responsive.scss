@@ -1,0 +1,54 @@
+@media only screen and (max-width: 700px) and (min-width: 501px) {
+  .firstname-wrapper {
+    svg {
+      width: 300px;
+      margin-bottom: -30px;
+    }
+  }
+
+  .surname-wrapper {
+    svg {
+      width: 500px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #logo-text {
+    margin-top: 25vh;
+  }
+
+  .firstname {
+    width: 170px;
+    margin-bottom: -28px;
+  }
+
+  .surname {
+    width: 340px;
+    margin-top: -30px;
+  }
+
+  .triangle1 {
+    width: 350px;
+  }
+
+  .triangle2 {
+    fill: rgba(161,78,191, 0.1);
+    width: 350px;
+  }
+
+  #sky {
+    .moon {
+      margin-bottom: -5vh;
+      width: 20vh;
+      height: 20vh;
+    }
+  }
+
+  nav, #nav {
+    a, li {
+      font-size: 1.2rem;
+      padding-left: 0px;
+    }
+  }
+}
