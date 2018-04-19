@@ -97,3 +97,10 @@ nav, #nav {
     }
   }
 }
+
+#player {
+  position: absolute;
+  bottom: 60px;
+  left: 60px;
+  z-index: 90;
+}
