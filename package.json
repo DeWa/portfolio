@@ -7,42 +7,10 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "browsersync": "npx browser-sync start --server 'dist' --files 'dist'",
-    "build-js:dev": "npx babel src/js --out-dir dist/js --source-maps inline & cp -a src/js/vendor dist/js/vendor",
-    "build-assets:dev": "cp -a -R src/assets dist",
-    "build-html:dev": "cp -f src/*.html dist/",
-    "build-css:dev": "node-sass src/sass/main.scss dist/css/main.css",
-    "postbuild-css:dev": "postcss dist/css/main.css  --use autoprefixer -b 'last 2 versions' -o dist/css/main.css",
-    "build-all:dev": "yarn build-js:dev & yarn build-assets:dev & yarn build-html:dev & yarn build-css:dev",
-    "build-js:prod": "npx babel src/js --out-dir dist/js & cp -a src/js/vendor dist/js/vendor",
-    "build-assets:prod": "npx imagemin src/assets/img/**/*.png --out-dir=dist/assets/img/",
-    "build-html:prod": "npx html-minifier --minify-css --collapse-whitespace --collapse-inline-tag-whitespace --remove-comments --input-dir src --output-dir dist",
-    "build-css:prod": "npx node-sass src/sass/main.scss dist/css/main.css",
-    "postbuild-css:prod": "NODE_ENV=production postcss dist/css/main.css  --no-map --env production --use cssnano --use autoprefixer -b 'last 2 versions' -o dist/css/main.css",
-    "build-all:prod": "yarn build-assets:prod & yarn build-html:prod & yarn build-css:prod",
-    "prebuild-all:prod": "npx rimraf dist",
-    "watch-all": "concurrently 'yarn watch-js' 'yarn watch-img' 'yarn watch-html' 'yarn watch-css'",
-    "watch-js": "chokidar 'src/js/**/*.js' -c 'yarn build-js:dev'",
-    "watch-img": "chokidar 'src/assets/**/*' -c 'yarn build-assets:dev'",
-    "watch-html": "chokidar 'src/*.html' -c 'yarn build-html:dev'",
-    "watch-css": "chokidar 'src/sass/*.scss' -c 'yarn build-css:dev'",
-    "dev": "yarn build-all:dev & yarn watch-all & yarn browsersync"
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "autoprefixer": "^8.1.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.5",
-    "chokidar-cli": "^1.2.0",
-    "concurrently": "^3.5.1",
-    "cssnano": "^3.10.0",
-    "html-minifier": "^3.5.12",
-    "imagemin-cli": "^3.0.0",
-    "node-sass": "^4.7.2",
-    "postcss": "^6.0.19",
-    "postcss-cli": "^5.0.0",
-    "prettier": "1.10.2",
-    "rimraf": "^2.6.2",
-    "uglify-js": "^3.3.16"
+    "parcel-bundler": "^1.9.7"
   }
 }
