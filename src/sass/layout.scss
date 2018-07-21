@@ -1,8 +1,11 @@
-body, html {
+body,
+html {
   height: 100%;
 }
 
-body, html, div {
+body,
+html,
+div {
   margin: 0;
   padding: 0;
   border: 0;
@@ -38,30 +41,30 @@ body {
   height: 100vh;
   z-index: -9;
 
-  svg{
+  svg {
     position: absolute;
   }
 }
 
-.triangle1{
+.triangle1 {
   fill: none;
-  stroke: rgb(91,200,175);
+  stroke: rgb(91, 200, 175);
   stroke-width: 5px;
   stroke-linecap: round;
   stroke-dasharray: 400 400;
   animation: triangle 20s linear infinite;
 }
 
-.triangle2{
-  fill: rgba(161,78,191, 0.2);
-  stroke: rgb(161,78,191);
+.triangle2 {
+  fill: rgba(161, 78, 191, 0.2);
+  stroke: rgb(161, 78, 191);
   stroke-width: 5px;
   stroke-linecap: round;
 }
 
 .pen {
   fill: url(#pinkAsShit);
-  stroke:rgb(111, 21, 105);
+  stroke: rgb(111, 21, 105);
   stroke-width: 1px;
   stroke-dasharray: 500px;
   stroke-dashoffset: 500px;
@@ -70,7 +73,8 @@ body {
   animation: writing 5s ease-in forwards;
 }
 
-nav, #nav {
+nav,
+#nav {
   z-index: 999; // always on top
   position: fixed;
   width: 100%;
@@ -84,13 +88,13 @@ nav, #nav {
   a {
     float: left;
   }
-  
+
   li {
     padding: 5px 20px;
     float: left;
-    font-family: 'Permanent Marker', cursive;
+    font-family: "Permanent Marker", cursive;
     font-size: 1.7rem;
-    color: rgb(91,200,175);
+    color: rgb(91, 200, 175);
 
     &:hover {
       animation: pinkshadow 0.4s linear forwards;
