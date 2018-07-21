@@ -1,13 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Russo+One');
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker|Russo+One");
 
+@font-face {
+  font-family: "TandyOld";
+  src: url("../assets/fonts/terminal.woff2") format("woff2"),
+    url("../assets/fonts/terminal.woff") format("woff"),
+    url("../assets/fonts/terminal.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
 
 .firstname {
-  fill: rgb(255,72,196);
+  fill: rgb(255, 72, 196);
   stroke: rgb(153, 8, 107);
   stroke-width: 1;
   stroke-linecap: round;
   //animation: writing 5s linear infinite;
 }
 .surname {
-  font-family: 'Russo One', sans-serif;
+  font-family: "Russo One", sans-serif;
+}
+
+.terminal {
+  font-family: "TandyOld", sans;
 }

@@ -5,9 +5,9 @@ https://codepen.io/meduzen/pen/zxbwRV
   position: absolute;
   filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='0.7');
   -webkit-filter: url(#blur-filter);
-        filter: url(#blur-filter);
-        -webkit-filter: blur(0.7px);
-        filter: blur(0.7px);
+  filter: url(#blur-filter);
+  -webkit-filter: blur(0.7px);
+  filter: blur(0.7px);
 }
 
 .blur-svg {
@@ -21,7 +21,11 @@ https://codepen.io/meduzen/pen/zxbwRV
   height: 200vw;
   background-size: 3px;
   background-repeat: repeat;
-  background-image: linear-gradient(to bottom, transparent 50%, $scanline-color1  51%);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 50%,
+    $scanline-color1 51%
+  );
   animation: scanlines-scroll 0s steps(30) infinite;
   z-index: -7;
 
@@ -32,7 +36,7 @@ https://codepen.io/meduzen/pen/zxbwRV
     height: 2px;
     z-index: 90;
     background: yellow;
-    opacity: .75;
+    opacity: 0.75;
     animation: scanline 6s linear infinite;
   }
 }
@@ -45,7 +49,7 @@ https://codepen.io/meduzen/pen/zxbwRV
   height: 60vh;
   width: 100vw;
   z-index: -12;
-  background-image: url('../assets/img/sky.png'), 
+  background-image: url("../assets/img/sky.png"),
     linear-gradient(to top, $sky-color1 5%, #121835 50%);
 
   .moon {
@@ -53,7 +57,8 @@ https://codepen.io/meduzen/pen/zxbwRV
     height: $moon-size;
     margin-bottom: -10vh;
     border-radius: 50%;
-    background-image: linear-gradient(to bottom,
+    background-image: linear-gradient(
+      to bottom,
       $moon-color-1 20%,
       $moon-color-2 40%,
       transparent 40%,
@@ -81,31 +86,33 @@ https://codepen.io/meduzen/pen/zxbwRV
   box-shadow: 0px -5px 35px 3px $fade-color;
   border-top: 2px solid $grid-color;
 
-  perspective: 90px;
+  perspective: 9vh;
   perspective-origin: top;
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 300vw;
     height: inherit;
 
     background-color: transparent;
-    background-size: 120px 50px;
-    background-image: linear-gradient(to right,
-      transparent 40%,
-      $grid-color-fade 50%,
-      $grid-color 2px,
-      $grid-color-fade 60%,
-      transparent 70%
-    ),
-    linear-gradient(to top,
-      transparent 40%,
-      $grid-color-fade 50%,
-      $grid-color 2px,
-      $grid-color-fade 60%,
-      transparent 70%
-    );
+    background-size: 8vw 4vh;
+    background-image: linear-gradient(
+        to right,
+        transparent 40%,
+        $grid-color-fade 50%,
+        $grid-color 2px,
+        $grid-color-fade 60%,
+        transparent 70%
+      ),
+      linear-gradient(
+        to top,
+        transparent 40%,
+        $grid-color-fade 50%,
+        $grid-color 2px,
+        $grid-color-fade 60%,
+        transparent 70%
+      );
     z-index: -111;
     transform: rotateX(40deg) translate(-30%, -25%);
     animation: scroll 1s linear infinite;
