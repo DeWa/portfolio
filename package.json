@@ -4,7 +4,7 @@
   "description": "My portfolio site",
   "repository": "git@bitbucket.org:DeWa/portfolio.git",
   "author": "Joonas Reinikka <joonas.reinikka@gmail.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "parcel src/index.html",
