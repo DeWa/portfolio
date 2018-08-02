@@ -1,80 +1,75 @@
-@media only screen and (max-width: 700px) and (min-width: 501px) {
-  .firstname-wrapper {
-    svg {
-      width: 10vw;
-      margin-bottom: -30px;
+/* Mobile */
+@media only screen and (max-width: 600px) {
+  #nav,
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    ul {
+      padding: 0;
+      float: none;
     }
+
+    li {
+      font-size: 2rem;
+      padding: 5px 10px;
+    }
+  }
+
+  .triangle1 {
+    width: 300px;
+  }
+
+  .triangle2 {
+    width: 300px;
+  }
+
+  .firstname-wrapper {
+    height: 70px;
   }
 
   .surname-wrapper {
-    svg {
-      width: 500px;
-    }
+    margin-top: -10px;
+    height: 50px;
   }
 }
 
-@media only screen and (max-width: 500px) {
-  #logo-text {
-    margin-top: 25vh;
+/* Portrait tablets & large phones */
+@media only screen and (min-width: 600px) {
+  .triangle1 {
+    width: 500px;
   }
 
-  .firstname {
-    width: 170px;
-    margin-bottom: -28px;
+  .triangle2 {
+    width: 500px;
+  }
+}
+
+/* Landscpae tablets */
+@media only screen and (min-width: 768px) {
+}
+
+/* Desktops */
+@media only screen and (min-width: 992px) {
+}
+
+/* Retina etc. */
+@media only screen and (min-width: 1700px) {
+  .triangle1 {
+    width: 800px;
   }
 
-  .surname {
-    width: 340px;
+  .triangle2 {
+    width: 800px;
+  }
+
+  .firstname-wrapper {
+    height: 230px;
+  }
+
+  .surname-wrapper {
     margin-top: -30px;
-  }
-
-  .triangle1 {
-    width: 350px;
-  }
-
-  .triangle2 {
-    fill: rgba(161, 78, 191, 0.1);
-    width: 350px;
-  }
-
-  #sky {
-    .moon {
-      margin-bottom: -5vh;
-      width: 20vh;
-      height: 20vh;
-    }
-  }
-
-  nav,
-  #nav {
-    a,
-    li {
-      font-size: 1.2rem;
-      padding-left: 0px;
-    }
-  }
-}
-
-@media only screen and (min-width: 2000px) {
-  .triangle1 {
-    height: 30vh;
-    width: 40vw;
-  }
-
-  .triangle2 {
-    fill: rgba(161, 78, 191, 0.1);
-    height: 20vh;
-    width: 20vw;
-  }
-
-  .firstname {
-    height: 10vh;
-    width: 20vw;
-    margin-bottom: -1vh;
-  }
-
-  .surname {
-    width: 25vw;
-    height: 10vh;
+    height: 200px;
   }
 }
